@@ -22,7 +22,6 @@ t/calendars/all-day-event.ics.day.html
 t/calendars/all-day-event.ics.month.html
 t/calendars/all-day-event.ics.week.html
 t/calendars/all-day-event.ics.year.html
-t/calendars/calendar.css
 t/calendars/complex.ics
 t/calendars/complex.ics.day.html
 t/calendars/complex.ics.month.html

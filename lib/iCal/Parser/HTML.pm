@@ -1,10 +1,10 @@
-# $Id: HTML.pm,v 1.4 2005/01/04 21:24:14 rick Exp $
+# $Id: HTML.pm,v 1.5 2005/01/05 22:53:40 rick Exp $
 package iCal::Parser::HTML;
 
 use strict;
 use warnings;
 
-our $VERSION=sprintf("%d.%02d", q$Revision: 1.4 $ =~ /(\d+)\.(\d+)/);
+our $VERSION=sprintf("%d.%02d", q$Name: ical-parser-html-1-5 $ =~ /(\d+)-(\d+)/);
 our @ISA = qw(Exporter);
 our @EXPORT_OK=qw($xml $xsl);
 

@@ -1,5 +1,5 @@
 use Module::Build 0.26;
-# $Id: Build.PL,v 1.5 2005/01/04 21:38:25 rick Exp $
+# $Id: Build.PL,v 1.6 2005/01/05 22:53:40 rick Exp $
 # See perldoc Module::Build for details of how this works
 my $build=
 Module::Build->new
@@ -18,7 +18,7 @@ Module::Build->new
     );
 $build->add_build_element('xsl');
 if($build->y_n
-   ('Would you like to install ical2html, a command line frontend?')) {
+   ('Would you like to install ical2html, a command line frontend?','n')) {
     $build->{properties}->{script_files}=['scripts/ical2html'];
 }
 $build->create_build_script;
