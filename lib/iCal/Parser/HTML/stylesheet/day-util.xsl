@@ -7,6 +7,7 @@
 
    <xsl:import href="cal-util.xsl"/>
    <xsl:param name="debug" select="0"/>
+
    <xsl:variable name="add-span" select="1"/>
    <xsl:output method="xml"
 	       doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -161,10 +162,18 @@
    </xsl:template>
 
    <xsl:template name="details">
+      <xsl:if test="location">
+	 <p class="location">(<xsl:value-of select="location"/>)</p>
+      </xsl:if>
+
       <xsl:apply-templates select="attendees"/>
+
       <p class="description">
 	 <xsl:value-of select="description" disable-output-escaping="yes"/>
       </p>
+   </xsl:template>
+
+   <xsl:template match="location">
    </xsl:template>
 
    <xsl:template match="attendees">

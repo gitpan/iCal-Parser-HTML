@@ -59,6 +59,7 @@ td.ignore p.daynum { color: #ddd; }
 a {color: inherit; text-decoration: none;}
 .organizer { text-decoration: underline; }
 .organizer, .attendee { font-size: .9em; }
+p.location { font-size: .92em; }
 div.nav a { text-decoration: none; color: inherit; }
 a:hover { color: #e80 !important; }
 div.nav { text-align: right; }
@@ -104,9 +105,9 @@ td.all-day { border: solid thin white; }
 tr.all-day-sep { height: 3px; background:white; }
 table.day p { margin: .1em 0; }
 p.description { font-size: .75em; }
-p.summary { margin-top: 2px; }
+p.summary { margin-top: 2px;}
 div.event-time { color: white; 
-                 border-bottom: dotted thin white; padding-top:1px; }
+                 border-bottom: dotted thin grey; padding-top:1px; }
 p.legend { margin: 0em; padding-left: 1em; }
 table.todo { table-layout: fixed; border-collapse: collapse; font-size: .9em; }
 td.priority { text-align: right; }

@@ -5,24 +5,25 @@ use iCal::Parser::HTML;
 use DateTime;
 use Getopt::Std;
 
-our $VERSION=sprintf("%d.%02d", q$Revision: 1.2 $ =~ /(\d+)\.(\d+)/);
+our $VERSION=sprintf("%d.%02d", q$Revision: 1.3 $ =~ /(\d+)\.(\d+)/);
 
-our %opts=();
-our $opts='d:l:wymh';
+our %opts=(z=>'local');
+our $opts='d:l:z:wymh';
 our $usage=q{usage: $0 {$opts} file ...
   -d YYYYMMDD date to generate calendar (default today)
+  -z tz       timezone to use (e.g., "America/New_York"
   -l base_url generate links in output html
   -w          weekly calendar
   -m          monthly calendar
   -y          yearly calendar
 
-The default is to generate a 1 day calendar for today. If w,m or y
-option is specfied, the calendar will be for the week, month or year
-containing the date and the date only needs to be specfied to the
+The default is to generate a 1 day calendar for today in the local timezone. 
+If w,m or y option is specfied, the calendar will be for the week, month or 
+year containing the date and the date only needs to be specfied to the
 relevant level of precision.
 
 If the -l option is specified, links of the form 
-href="$base_url;type=type;date=yymmdd" will be generated as appopriate
+href="$base_url;type=type;date=yymmdd" will be generated as appropriate
 in the html output.
 
 };
@@ -34,11 +35,11 @@ unless($opts{d}) {
     my @t=localtime;
     $t[5]+=1900;
     $t[4]++;
-    $opts{d}=join('',@t[5,4,3]);
+    $opts{d}=sprintf('%4d%02d%02d',@t[5,4,3]);
 }
 my $type = $opts{w} ? 'week' : $opts{m} ? 'month' : $opts{y} ? 'year' : 'day';
 
-print iCal::Parser::HTML->new->parse(type=>$type,start=>$opts{d},
+print iCal::Parser::HTML->new->parse(type=>$type,start=>$opts{d},tz=>$opts{z},
 				     base_url=>$opts{l},files=>[@ARGV]);
 
 exit 0;

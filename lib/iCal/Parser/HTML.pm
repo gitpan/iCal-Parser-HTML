@@ -4,7 +4,7 @@ package iCal::Parser::HTML;
 use strict;
 use warnings;
 
-our $VERSION=sprintf("%d.%02d", q$Name: ical-parser-html-1-5 $ =~ /(\d+)-(\d+)/);
+our $VERSION=sprintf("%d.%02d", q$Name: ical-parser-html-1-6 $ =~ /(\d+)-(\d+)/);
 our @ISA = qw(Exporter);
 our @EXPORT_OK=qw($xml $xsl);
 
