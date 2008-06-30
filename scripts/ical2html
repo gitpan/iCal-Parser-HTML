@@ -46,7 +46,7 @@ exit 0;
 
 =head1 NAME
 
-ical2xml - Convert iCalendar files to HTML
+ical2html - Convert iCalendar files to HTML
 
 =head1 SYNOPSIS
 

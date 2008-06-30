@@ -2,6 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 		xmlns:date="http://exslt.org/dates-and-times"
 		xmlns:f="http://exslt.org/functions"
+		xmlns:my="uri:local"
 		extension-element-prefixes="date f"
 		version="1.0">
 

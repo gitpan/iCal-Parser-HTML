@@ -1,5 +1,5 @@
 #!/usr/local/bin/perl -w
-#$Id: ical.cgi,v 1.6 2005/01/04 21:24:14 rick Exp $
+#$Id: ical.cgi 5 2005-03-19 23:27:33Z rick $
 use strict;
 
 use iCal::Parser::HTML qw($xsl $xml);

@@ -15,7 +15,7 @@
    <xsl:template match="/">
       <html lang="en" xml:lang="en">
 	 <head>
-	    <!-- $Id: index.xsl,v 1.1 2004/12/31 06:57:44 rick Exp $ -->
+	    <!-- $Id: index.xsl 1 2005-03-19 23:14:58Z rick $ -->
 	    <meta http-equiv="Content-Type" content="text/html; 
 						     charset=UTF-8" />
 	    <link rel="stylesheet" type="text/css" href="calendar.css"/>

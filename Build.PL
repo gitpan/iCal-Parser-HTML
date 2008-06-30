@@ -1,5 +1,5 @@
 use Module::Build 0.26;
-# $Id: Build.PL,v 1.8 2005/02/02 02:40:01 rick Exp $
+# $Id: Build.PL 5 2005-03-19 23:27:33Z rick $
 # See perldoc Module::Build for details of how this works
 my $build=
 Module::Build->new

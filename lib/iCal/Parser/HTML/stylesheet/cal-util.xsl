@@ -34,7 +34,7 @@
    <xsl:template match="/">
       <html lang="en" xml:lang="en">
 	 <head>
-	    <!-- $Id: cal-util.xsl,v 1.3 2004/12/31 22:45:46 rick Exp $ -->
+	    <!-- $Id: cal-util.xsl 1 2005-03-19 23:14:58Z rick $ -->
 	    <meta http-equiv="Content-Type" content="text/html; 
 						     charset=UTF-8" />
 	    <link rel="stylesheet" type="text/css" href="calendar.css"/>

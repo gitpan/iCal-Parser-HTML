@@ -1,10 +1,12 @@
-# $Id: HTML.pm,v 1.5 2005/01/05 22:53:40 rick Exp $
+# $Id: HTML.pm 517 2008-06-30 23:48:04Z rick $
 package iCal::Parser::HTML;
 
 use strict;
 use warnings;
 
-our $VERSION=sprintf("%d.%02d", q$Name: ical-parser-html-1-6 $ =~ /(\d+)-(\d+)/);
+# Get version from subversion url of tag or branch.
+our $VERSION= do {(q$URL: svn+ssh://xpc/var/lib/svn/rick/perl/ical/iCal-Parser-HTML/tags/1.07/lib/iCal/Parser/HTML.pm $=~ m$.*/(?:tags|branches)/([^/ \t]+)$)[0]||'0.1'};
+
 our @ISA = qw(Exporter);
 our @EXPORT_OK=qw($xml $xsl);
 
@@ -60,7 +62,7 @@ sub sheet_args {
     my($self,$date,$url)=@_;
     my %args;
     foreach my $t qw(week month year) {
-	$args{$t}=$date->$t();
+		$args{$t}=$date->$t();
     }
     $args{date}='"'.$date->ymd .'"';
     $args{'base-url'}='"'.$url.'"';
@@ -104,7 +106,7 @@ program L<scripts/ical2html> and, in the example directory, a cgi handler
 for formatting the html output. Note that the html output will
 look quite broken without the stylesheet.
 
-=head2 ARGUMENTS
+=head1 ARGUMENTS
 
 The following arguments are processed by this module. Any addtional
 arguments are passed to L<iCal::Parser::SAX>.
@@ -148,8 +150,6 @@ The params C<type> and C<date> will be appended to this url
 when generating the links.
 
 =back
-
-=head1 METHODS
 
 =head1 AUTHOR
 
